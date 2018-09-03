@@ -1,1 +1,1 @@
-# nethserver-template
+# nethserver-rh-python36
