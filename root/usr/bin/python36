@@ -1,0 +1,3 @@
+#!/bin/bash
+COMMAND=$@
+scl enable rh-python36 "$COMMAND"
