@@ -4,7 +4,6 @@ return "#rh-python36 is not enabled" unless (($python{'version'}||'disabled') eq
 $OUT .= q(
 #!/bin/bash
 # rh-python36 is enabled per default
-COMMAND=$@
-scl enable rh-python36 "$COMMAND"
+source scl_source enable rh-python36
 );
 }

@@ -2,14 +2,15 @@
 
 use esmith::Build::CreateLinks qw(:all);
 
+my @templates = qw (
+    /etc/profile.d/enableSoftwareCollectionPython.sh
+);
+
 my $event = 'nethserver-rh-python36-update';
 
-event_templates($event, qw(
-    /etc/profile.d/enableSoftwareCollectionPython.sh
-));
+event_actions ( $event, 'initialize-default-databases' => '00');
+event_templates($event, @templates);
 
 $event = 'python-update';
 
-event_templates($event, qw(
-    /etc/profile.d/enableSoftwareCollectionPython.sh
-));
+event_templates($event, @templates);
